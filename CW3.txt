@@ -1,0 +1,58 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class cw3_1 : MonoBehaviour
+{
+    string heroName = "Jerry";
+    int heroPower = 70;
+
+    string villainsName = "Tom";
+    int villainsPower = 50;
+
+    double playerSpeed = 4.5f;
+    double speedafter = 2.5f;
+
+    void Start()
+    {
+        if (heroPower > villainsPower)
+        {
+            print("The Hero has more power than the Villain");
+        }
+        else if (villainsPower > heroPower)
+        {
+            print("The Villain has more power than the Hero");
+        }
+        else
+        {
+            print("The Hero and the Villain have the same amount of power");
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    void SetSpeed(double speedafter)
+    {
+        print("The old speed rate: " + playerSpeed);
+        playerSpeed = speedafter;
+        print("The new speed rate: " + playerSpeed);
+    }
+    void CompareSpeed()
+    {
+        if (playerSpeed > speedafter)
+        {
+            print("The higher speed is: " + playerSpeed);
+        }
+        else if (speedafter > playerSpeed)
+        {
+            print("The higher speed is: " + speedafter);
+        }
+        else
+        {
+            print("Both have the same amount of speed");
+        }
+    }
+}
