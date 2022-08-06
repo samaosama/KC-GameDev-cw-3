@@ -39,16 +39,18 @@ public class cw3_1 : MonoBehaviour
         print("The old speed rate: " + playerSpeed);
         playerSpeed = speedafter;
         print("The new speed rate: " + playerSpeed);
+        CompareSpeed(playerSpeed,speedafter);
+        
     }
-    void CompareSpeed()
+    void CompareSpeed(double Strongspeed, double Weakspeed)
     {
-        if (playerSpeed > speedafter)
+        if (Strongspeed > Weakspeed)
         {
-            print("The higher speed is: " + playerSpeed);
+            print("The higher speed is: " + Strongspeed);
         }
-        else if (speedafter > playerSpeed)
+        else if (Weakspeed > Strongspeed)
         {
-            print("The higher speed is: " + speedafter);
+            print("The higher speed is: " + Weakspeed);
         }
         else
         {
